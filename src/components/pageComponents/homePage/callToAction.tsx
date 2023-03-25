@@ -12,7 +12,7 @@ const Cta = () => {
           <p className='text-center max-w-xl mx-auto'>
             Coba Gratis — Coba berbagai macam tema kami
           </p>
-          <Link href='https://app.jadiberkesan.com?type=signin'>
+          <Link href='https://app.jadiberkesan.com/auth?type=signin'>
             <button className='btn btn-primary text-white md:h-14'>
               Buat Undangan
             </button>

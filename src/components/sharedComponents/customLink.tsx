@@ -6,9 +6,15 @@ export type Props = {
   href: string;
   className?: string;
   children: React.ReactNode;
+  isNotNewTab?: boolean;
 } & LinkProps;
 
-const CustomLink: React.FC<Props> = ({ href, children, ...props }) => {
+const CustomLink: React.FC<Props> = ({
+  href,
+  children,
+  isNotNewTab,
+  ...props
+}) => {
   const isExternal = href.startsWith('http') ? false : true;
   // if (isExternal) {
   //   return (
@@ -25,7 +31,12 @@ const CustomLink: React.FC<Props> = ({ href, children, ...props }) => {
           <span className='block'>{children}</span>
         </Link>
       ) : (
-        <a {...props} href={href} target='_blank' rel='noopener noreferrer'>
+        <a
+          {...props}
+          href={href}
+          target={isNotNewTab ? '_self' : '_blank'}
+          rel='noopener noreferrer'
+        >
           {children}
         </a>
       )}

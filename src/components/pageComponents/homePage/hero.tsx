@@ -79,7 +79,10 @@ const Hero = () => {
                 dalam hitungan menit dengan berbagai macam tema menarik.
               </p>
               <div className='flex space-x-2 justify-center md:justify-start'>
-                <Link href='https://app.jadiberkesan.com?type=signin'>
+                <Link
+                  isNotNewTab
+                  href='https://app.jadiberkesan.com/auth?type=signin'
+                >
                   <div className='relative'>
                     <div className='absolute top-0 left-0 right-0 w-full h-full z-0 bg-primary blur-md opacity-80'></div>
                     <Button
