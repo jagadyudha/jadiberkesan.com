@@ -42,10 +42,10 @@ const Navbar = () => {
               ))}
             </div>
             <div className='space-x-4 flex items-center justify-center'>
-              <CustomLink href='/auth?type=signin'>
+              <CustomLink href='https://app.jadiberkesan.com?type=signin'>
                 <button className='hover:text-primary'>Masuk</button>
               </CustomLink>
-              <CustomLink href='/auth?type=signup'>
+              <CustomLink href='https://app.jadiberkesan.com?type=signup'>
                 <Button variant='solid' color='primary'>
                   Daftar
                 </Button>
@@ -93,7 +93,7 @@ const Navbar = () => {
               </CustomLink>
             ))}
             <div className='my-6 space-y-3 uppercase'>
-              <CustomLink href='/auth?type=signin'>
+              <CustomLink href='https://app.jadiberkesan.com?type=signin'>
                 <Button
                   variant='outline'
                   color='primary'
@@ -102,7 +102,7 @@ const Navbar = () => {
                   Masuk
                 </Button>
               </CustomLink>
-              <CustomLink href='/auth?type=signup'>
+              <CustomLink href='https://app.jadiberkesan.com?type=signup'>
                 <Button
                   variant='solid'
                   color='primary'

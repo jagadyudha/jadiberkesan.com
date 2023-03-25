@@ -15,7 +15,9 @@ const Collapse: React.FC<Props> = ({ title, description }) => {
         {({ open }) => (
           <>
             <Disclosure.Button className='flex justify-between w-full py-6'>
-              <span className={clsx(open && 'text-primary')}>{title}</span>
+              <span className={clsx(open && 'text-primary', 'text-left mr-2')}>
+                {title}
+              </span>
               <IoChevronUp
                 className={`${
                   open ? 'rotate-180 transform' : ''
