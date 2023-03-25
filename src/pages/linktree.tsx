@@ -12,7 +12,7 @@ const Linktree = () => {
         nofollow={true}
         noindex={true}
       />
-      <div className='flex flex-col items-center max-w-7xl mx-auto py-10 md:py-12 lg:py-24 px-5 md:px-10 lg:px-20'>
+      <div className='flex flex-col items-center max-w-7xl mx-auto py-10 md:py-12 lg:py-20 px-5 md:px-10 lg:px-20'>
         <img src='/assets/svg/logo-linktree.svg' className='w-24' alt='logo' />
         <div className='text-center mt-8'>
           <div className='space-y-2'>
