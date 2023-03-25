@@ -4,12 +4,22 @@ import { NextSeo } from 'next-seo';
 import Link from 'next/link';
 import Button from '@/components/sharedComponents/button';
 import { ThemeProps } from '@/lib/types';
+import defaultConfig from '@/lib/defaultConfig';
 
 export type ThemesProps = {
   themes: ThemeProps[];
 };
 
 const ThemePage = ({ themes }: ThemesProps) => {
+  // logic view
+  const priceData = (discount: number, price: number) => {
+    return (
+      'Rp.' +
+      (discount ? discount : price)
+        .toString()
+        .replace(/\B(?=(\d{3})+(?!\d))/g, '.')
+    );
+  };
   return (
     <main>
       <NextSeo
@@ -17,8 +27,7 @@ const ThemePage = ({ themes }: ThemesProps) => {
         description='Setiap tema undangan dirancang oleh ahli yang tepat sehingga
             undangan pernikahanmu menjadi lebih berkesan dan unik.'
       />
-      <section className='bg-white py-10 md:py-24 flex flex-col space-y-4 md:text-left max-w-7xl mx-auto md:flex justify-center items-center px-5 md:px-10 lg:px-20'>
-        {/* Header */}
+      <section className='bg-white py-10 md:py-18 flex flex-col space-y-4 md:text-left max-w-7xl mx-auto md:flex justify-center items-center px-5 md:px-10 lg:px-20'>
         <div className='mb-4 md:mb-8 text-center'>
           <h2 className='text-2xl lg:text-5xl font-bold'>
             Tema undangan <span></span>
@@ -31,8 +40,11 @@ const ThemePage = ({ themes }: ThemesProps) => {
 
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-8 my-10'>
           {themes.map((item: ThemeProps) => (
-            <Link key={item.id} href={`/app/create?theme=${item.id}`}>
-              <div className='relative group border border-gray-200 rounded-lg h-full flex flex-col'>
+            <Link
+              key={item.id}
+              href={`${defaultConfig['appUrl']}/create?theme=${item.name}`}
+            >
+              <div className='relative group border  border-gray-200 rounded-lg h-full flex flex-col'>
                 <div className='opacity-0 group-hover:lg:opacity-100 translate-y-12 group-hover:translate-y-0 duration-200 absolute z-[1] h-full w-full flex justify-center items-center'>
                   <Button variant='solid' color='primary'>
                     Pilih tema ini
@@ -41,10 +53,10 @@ const ThemePage = ({ themes }: ThemesProps) => {
 
                 <div className='bg-base-200 w-full relative aspect-[14/9] rounded-t-lg duration-300'>
                   <Image
-                    className='rounded-t-lg'
+                    className='rounded-t-lg bg-gray-100 duration-300'
                     src={item.image}
-                    layout='fill'
                     alt={item.name}
+                    fill
                   />
                 </div>
                 <div className='flex flex-col justify-between md:space-y-14 p-4 relative text-left'>
@@ -72,15 +84,8 @@ const ThemePage = ({ themes }: ThemesProps) => {
                             %
                           </span>
                         )}
-                        <span className=' font-bold block'>
-                          Rp.{' '}
-                          {item.discount
-                            ? item.discount
-                                .toString()
-                                .replace(/\B(?=(\d{3})+(?!\d))/g, '.')
-                            : item.price
-                                .toString()
-                                .replace(/\B(?=(\d{3})+(?!\d))/g, '.')}
+                        <span className='font-bold block'>
+                          {priceData(item.discount, item.price)}
                         </span>
                       </div>
                     </div>

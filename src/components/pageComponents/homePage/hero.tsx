@@ -1,10 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import Link from 'next/link';
 import Animation from '@/components/sharedComponents/animation';
 import { dataHero } from '@/lib/dummy';
 import useModal from '@/hooks/useModal';
-import { IoPlayCircleOutline } from 'react-icons/io5';
-import Modal from '@/components/sharedComponents/modal';
 import Button from '@/components/sharedComponents/button';
 
 const Hero = () => {
@@ -33,20 +32,6 @@ const Hero = () => {
 
   return (
     <>
-      {/* Modal Video */}
-      <Modal isOpen={isModalVideoOpen} close={closeModalVideo}>
-        <div className='space-x-2 flex bg-black overflow-hidden h-[calc(100vh-100px)] justify-end aspect-[9/16] w-full'>
-          <iframe
-            id='youtube'
-            width='100%'
-            height='100%'
-            src='https://www.youtube.com/embed/rwOHk9WdMM8?autoplay=1&mute=1&enablejsapi=1'
-            title='Cara Membuat Website Undangan Digital di Jadiberkesan'
-            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; autoplay'
-            allowFullScreen
-          ></iframe>
-        </div>
-      </Modal>
       <section className='relative pb-5 overflow-x-hidden md:overflow-x-clip pt-20 md:py-20 lg:py-32 lg:pb-48 flex flex-col justify-center'>
         <Animation variants='fadedown' duration={1} delay={0}>
           <div className='relative space-y-4 text-center md:text-left max-w-7xl mx-auto md:flex md:flex-row-reverse justify-center items-center px-5 md:px-10 lg:px-20'>
@@ -92,13 +77,8 @@ const Hero = () => {
                   </div>
                 </Link>
                 <div className='relative'>
-                  <Button
-                    onClick={openModalVideo}
-                    variant='outline'
-                    color='primary'
-                    rightIcon={<IoPlayCircleOutline className='text-xl' />}
-                  >
-                    Tonton
+                  <Button variant='outline' color='primary'>
+                    Lihat Harga
                   </Button>
                 </div>
               </div>

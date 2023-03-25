@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import NextImage, { ImageProps } from 'next/image';
 
 export type Props = {
@@ -18,9 +18,6 @@ const Image: React.FC<Props> = ({
   images,
   ...props
 }) => {
-  const [isOpen, setIsOpen] = React.useState(false);
-  const [selectedImage, setSelectedImage] = React.useState(index ?? 0);
-
   // create function to detect cloudinary
   const adaptiveCloudinaryImage = (src: string, effect?: string) => {
     const convertToWebp = src.replace(/\.(png|jpg|jpeg)$/, '.webp');
@@ -45,10 +42,8 @@ const Image: React.FC<Props> = ({
         } flex justify-center overflow-hidden relative w-full h-full`}
       >
         <NextImage
-          onClick={() => setIsOpen(true)}
           src={adaptiveCloudinaryImage(src, effect)}
           placeholder='blur'
-          objectFit='cover'
           blurDataURL={adaptiveCloudinaryImage(src, effect)}
           className={`${className ? className : 'rounded-md'}`}
           {...props}
