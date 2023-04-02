@@ -36,6 +36,7 @@ const CustomLink: React.FC<Props> = ({
           href={href}
           target={isNotNewTab ? '_self' : '_blank'}
           rel='noopener noreferrer'
+          className='block'
         >
           {children}
         </a>

@@ -11,7 +11,7 @@ export type ThemesProps = {
 };
 
 const ThemePage = ({ themes }: ThemesProps) => {
-  // logic view
+  // method
   const priceData = (discount: number, price: number) => {
     return (
       'Rp.' +
@@ -20,6 +20,16 @@ const ThemePage = ({ themes }: ThemesProps) => {
         .replace(/\B(?=(\d{3})+(?!\d))/g, '.')
     );
   };
+
+  const onSetTheme = (themeId: string) => {
+    sessionStorage.setItem('jbc_themeId', themeId);
+  };
+
+  React.useEffect(() => {
+    let data = sessionStorage.getItem('jbc_themeId');
+    console.log(data);
+  }, []);
+
   return (
     <main>
       <NextSeo
@@ -41,6 +51,7 @@ const ThemePage = ({ themes }: ThemesProps) => {
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-8 my-10'>
           {themes.map((item: ThemeProps) => (
             <Link
+              onClick={() => onSetTheme(item.id)}
               key={item.id}
               href={`${defaultConfig['appUrl']}/create?theme=${item.name}`}
             >

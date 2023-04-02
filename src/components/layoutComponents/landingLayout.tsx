@@ -11,7 +11,6 @@ export type Props = {
 const Layout = ({ children }: Props) => {
   const router = useRouter();
   const exclude = ['/wa', '/linktree', '/[redirect]'].includes(router.pathname);
-  console.log(exclude);
   if (exclude) {
     return (
       <motion.div
