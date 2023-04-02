@@ -20,5 +20,6 @@ export async function getStaticProps() {
     props: {
       themes: data.themes,
     },
+    revalidate: 10,
   };
 }
