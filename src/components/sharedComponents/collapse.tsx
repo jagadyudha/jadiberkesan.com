@@ -19,9 +19,7 @@ const Collapse: React.FC<Props> = ({ title, description }) => {
                 {title}
               </span>
               <IoChevronUp
-                className={`${
-                  open ? 'rotate-180 transform' : ''
-                } h-5 w-5 text-primary`}
+                className={`${open ? '' : 'rotate-180'} h-5 w-5 text-primary`}
               />
             </Disclosure.Button>
             <Disclosure.Panel className='text-sm text-gray-500 text-left pb-2'>
