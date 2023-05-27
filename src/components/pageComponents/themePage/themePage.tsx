@@ -53,7 +53,7 @@ const ThemePage = ({ themes }: ThemesProps) => {
             <Link
               onClick={() => onSetTheme(item.id)}
               key={item.id}
-              href={`${defaultConfig['appUrl']}/create/redirect?themeId=${item.id}`}
+              href={`${defaultConfig['appUrl']}/redirect?themeId=${item.id}`}
             >
               <div className='relative group border  border-gray-200 rounded-lg h-full flex flex-col'>
                 <div className='opacity-0 group-hover:lg:opacity-100 translate-y-12 group-hover:translate-y-0 duration-200 absolute z-[1] h-full w-full flex justify-center items-center'>
