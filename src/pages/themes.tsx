@@ -13,7 +13,7 @@ export default Index;
 
 export async function getStaticProps() {
   const data = await (
-    await fetch('https://jadiberkesancom-staging.up.railway.app/api/v1/themes')
+    await fetch('https://app.jadiberkesan.com/api/v1/themes')
   ).json();
 
   return {
