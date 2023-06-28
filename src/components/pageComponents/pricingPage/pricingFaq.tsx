@@ -17,11 +17,11 @@ const PricingFaq = () => {
         />
         <Collapse
           title='Apakah aman melakukan pembayaran online?'
-          description='Ya, Sebagian besar sistem pembayaran online menggunakan enkripsi aman untuk melindungi informasi pribadi kamu. Namun, penting untuk hanya melakukan pembayaran di situs web yang kamu percayai dan memiliki sambungan aman (https).'
+          description='Ya. Sebagian besar sistem pembayaran online menggunakan enkripsi aman untuk melindungi informasi pribadi kamu. Namun, penting untuk hanya melakukan pembayaran di situs web yang kamu percayai dan memiliki sambungan aman (https).'
         />
         <Collapse
           title='Apakah ada jaminan uang kembali?'
-          description='Ya. Kami menawarkan jaminan uang kembali dalam 24 jam untuk paket kustom jika kamu berubah pikiran.'
+          description='Ya. Kami menawarkan jaminan pengembalian uang dalam waktu 24 jam jika kamu kurang puas dengan produk kami.'
         />
       </div>
     </section>

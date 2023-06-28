@@ -20,7 +20,7 @@ const Pricing = () => {
         {dataPricing.map((item, index) => (
           <div
             key={index}
-            className='border border-gray-200 rounded-lg p-6 flex flex-col '
+            className='border border-gray-200 rounded-lg p-6 flex flex-col justify-between '
           >
             <h3 className=' font-bold mb-3'>{item.name}</h3>
             <span className='block text-gray-500'>{item.descriptiobn}</span>
@@ -36,7 +36,7 @@ const Pricing = () => {
                 </span>
               ))}
             </div>
-            {item.name.includes('Reseller') ? (
+            {['Paket Reseller', 'Paket Vendor'].includes(item.name) ? (
               <Button
                 variant='solid'
                 color='primary'

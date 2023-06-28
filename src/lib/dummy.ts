@@ -33,24 +33,28 @@ export const dataCardTwitter = {
 
 export const dataPricing = [
   {
-    name: 'Paket Umum',
+    name: 'Paket Regular',
     descriptiobn:
-      'Pilihan terbaik untuk calon mempelai yang tidak mau ribet memasukkan data mempelai',
+      'Pilihan terbaik untuk calon mempelai yang tidak ingin repot mengatur undangan.',
     price: 'Rp. 100.000',
-    detail: ['Bebas pilih tema yang ada', 'Tidak perlu ribet'],
-  },
-  {
-    name: 'Paket Kustom',
-    descriptiobn:
-      'Pilihan terbaik untuk calon mempelai yang ingin melakukan kustom tema undangan',
-    price: 'Rp. 200.000',
-    detail: ['Semua yang ada di paket umum', 'Tema dan musik sesuai keinginan'],
+    detail: ['Tidak perlu repot', 'Proses mudah dan cepat'],
   },
   {
     name: 'Paket Reseller',
     descriptiobn:
-      'Pilihan terbaik untuk Wedding Orginzer yang ingin menjual ulang undangan dengan logo sendiri',
+      'Pilihan terbaik untuk pengguna yang ingin menjual ulang undangan.',
     price: 'Requested',
-    detail: ['Dapat Harga lebih murah', 'Akses ke semua tema'],
+    detail: ['Potongan harga hingga 15%', 'Akses ke seluruh tema'],
+  },
+  {
+    name: 'Paket Vendor',
+    descriptiobn:
+      'Pilihan terbaik untuk Wedding Organizer yang ingin menjual undangan dengan kustomisasi branding',
+    price: 'Requested',
+    detail: [
+      'Semua yang ada di paket reseller',
+      'Halaman vendor profile',
+      'Kustomisasi logo dan nama vendor',
+    ],
   },
 ];

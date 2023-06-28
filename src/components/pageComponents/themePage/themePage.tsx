@@ -25,11 +25,6 @@ const ThemePage = ({ themes }: ThemesProps) => {
     sessionStorage.setItem('jbc_themeId', themeId);
   };
 
-  React.useEffect(() => {
-    let data = sessionStorage.getItem('jbc_themeId');
-    console.log(data);
-  }, []);
-
   return (
     <main>
       <NextSeo
@@ -72,13 +67,13 @@ const ThemePage = ({ themes }: ThemesProps) => {
                 </div>
                 <div className='flex flex-col justify-between md:space-y-14 p-4 relative text-left'>
                   <div className='space-y-4'>
-                    <h3 className='text-lg font-bold group-hover:text-primary duration-300'>
+                    <h3 className='capitalize text-lg font-bold group-hover:text-primary duration-300'>
                       {item.name}
                     </h3>
                     <p>{item.description}</p>
                     <div>
                       {item.discount && (
-                        <del className=' font-bold'>
+                        <del className='font-bold'>
                           Rp.{' '}
                           {item.price
                             .toString()

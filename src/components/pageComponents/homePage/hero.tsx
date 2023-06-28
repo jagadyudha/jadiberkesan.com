@@ -76,11 +76,13 @@ const Hero = () => {
                     </Button>
                   </div>
                 </Link>
-                <div className='relative'>
-                  <Button variant='outline' color='primary'>
-                    Lihat Harga
-                  </Button>
-                </div>
+                <Link href='/themes'>
+                  <div className='relative'>
+                    <Button variant='outline' color='primary'>
+                      Pilih Tema
+                    </Button>
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
