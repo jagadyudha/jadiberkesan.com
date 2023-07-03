@@ -42,7 +42,7 @@ const Linktree = () => {
 };
 
 const dataLinkTree = [
-  { name: 'Katalog Undangan', href: 's' },
+  { name: 'Katalog Undangan', href: '/themes' },
   {
     name: 'Kontak Admin',
     href: 'https://api.whatsapp.com/send?phone=6285156026240&text=%5BSaya%20ingin%20bertanya%5D',
